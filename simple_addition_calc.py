@@ -36,9 +36,9 @@ class SimpleAddApp(ctk.CTk):
     def add(self):
         try:
             total = float(self.entry1.get()) + float(self.entry2.get())
-            formatted = int(total) if total.is_integer() else total
+            #formatted = int(total) if total.is_integer() else total
             self.result_label.configure(
-                text=f"Result: {formatted}", text_color=("#2e7d32", "#4caf50")
+                text=f"Result: {total}", text_color=("#2e7d32", "#4caf50")
             )
         except ValueError:
             self.result_label.configure(
